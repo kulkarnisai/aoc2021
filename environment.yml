@@ -1,4 +1,3 @@
-name: aoc2021
 dependencies:
   - python  # or 2.7
   - numpy
