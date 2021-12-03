@@ -1,4 +1,6 @@
 import os
+import sys
+
 def count_increasing(sonar, width=1):
     count = 0
 
@@ -24,7 +26,7 @@ def preprocess(fname):
 
     return arr
 
-def test_day1(outfile=None):
+def test_day1(outfile):
 
     test_arr = preprocess("test_input")
     arr = preprocess("input")
@@ -47,4 +49,4 @@ def test_day1(outfile=None):
     print("P2:\t" + str(count_increasing(arr, 3)) + codeblock)
 
 if __name__ == "__main__":
-    test_day1()
+    test_day1(None)

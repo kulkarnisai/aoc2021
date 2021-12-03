@@ -1,5 +1,6 @@
 
 import os
+import sys
 
 def get_position(commands):
     x, y = 0, 0
@@ -34,7 +35,7 @@ def preprocess(fname):
         arr = [ line.split(' ') for line in f.readlines()]
     return arr
 
-def test_day2(outfile=None):
+def test_day2(outfile):
 
     test_arr = preprocess("test_input")
     arr = preprocess("input")
@@ -57,4 +58,4 @@ def test_day2(outfile=None):
     print("P2:\t" + str(get_position_with_aim(arr)) + codeblock)
 
 if __name__ == "__main__":
-    test_day2()
+    test_day2(None)

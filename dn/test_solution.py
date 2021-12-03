@@ -1,5 +1,6 @@
 
 import os
+import sys
 def FNAME1(arr):    
    return 0
 
@@ -14,7 +15,7 @@ def preprocess(fname):
 
     return arr
 
-def test_dayN(outfile=None):
+def test_dayN(outfile):
 
     test_arr = preprocess("test_input")
     arr = preprocess("input")
@@ -37,4 +38,4 @@ def test_dayN(outfile=None):
     print("P2:\t" + str(FNAME2(arr)) + codeblock)
 
 if __name__ == "__main__":
-    test_dayN()
+    test_dayN(None)
