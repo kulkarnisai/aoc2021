@@ -29,8 +29,7 @@ jobs:
       - name: Run a multi-line script
         id: pytest-runner
         run: |
-          conda env create -f environment.yml
-          source activate aoc2021
+          conda env update -f environment.yml --name=base
           pytest --outfile=results.md
 
       - name: Attach the report
