@@ -1,6 +1,8 @@
 
 import os
 import sys
+import pytest
+
 def FNAME1(arr):    
    return 0
 
@@ -15,6 +17,8 @@ def preprocess(fname):
 
     return arr
 
+
+@pytest.mark.skip(reason="TEMPLATE TEST")
 def test_dayN(outfile):
 
     test_arr = preprocess("test_input")
