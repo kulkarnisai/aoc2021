@@ -25,20 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         id: pytest-runner
         run: |
-          pip install pytest pytest-html
-          pytest -v --html="index.html" --self-contained-html
+          conda env create -f environment.yml
+          conda activate aoc2021
+          pytest --outfile=results.md
 
       - name: Attach the report
         uses: actions/upload-artifact@v1
         with:
-          name: test-report
-          path: index.html
+          name: results
+          path: results.md
 
